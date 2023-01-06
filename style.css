@@ -1,88 +1,528 @@
 * {
-    padding: 0%;
-    margin: 0%;
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
 }
 
-div {
-    width:100%;
-    background-color: bisque;
-    margin: 0 0 0 0;
-    padding: 0 0 0 0;
+body {
+  background-color: #F0DBDB;
 }
 
-.background {
-    background: linear-gradient(132deg, #1fb2cc, #712fe4, #ff0c0c);
-    background-size: 400% 400%;
-    animation: Gradient 15s ease infinite;
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
-    padding:0;
-    margin:0px;
+/* Hero */
+.topsection {
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-color: #F5EBE0;
+  z-index: -2;
+}
+
+nav {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom:20px;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-bottom: 20px;
+  font-weight: bold;
+  opacity: none;
+  top: 0;
+  z-index: 100;
+}
+
+.navcolor {
+  position: fixed;
+  display: block;
+  top: 0;
+  width: 100%;
+  background-color: #FEFCF3;
+  opacity: none;
+  z-index: 100;
+}
+
+.homenav {
+  color: black;
+  letter-spacing: .5px;
+  text-decoration: none;
+}
+
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px 25px;
+}
+
+.list {
+  color: black;
+  text-decoration: none;
+}
+
+.list:hover {
+  color: black;
+  transition: .5s;
+  text-decoration: underline;
+}
+
+#aboutme {
+  height: 700px;
+  width: 700px;
+  z-index: 3;
+  position:absolute;
+  top: 27%;
+  left: 40%;
+  border-radius: 50%;
+  background-color: white;
+  text-align: left;
+  transition:0.5s;
+}
+
+#aboutme:hover {
+  transform: scale(1.5);
+}
+
+#intro {
+  padding-top: 200px;
+  padding-left: 70px;
+  font-size: 50px;
+  font-style: italic;
+  padding-bottom: 2%;
+}
+
+#quickinfo {
+  letter-spacing: 2px;
+  padding-left: 70px;
+}
+
+/* 
+The typewriter cursor effect 
+https://css-tricks.com/snippets/css/typewriter-effect/
+*/
+#one {
+  display: inline-block;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid black; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+#two {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 70% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+from, to { border-color: transparent }
+50% { border-color: black; }
+}
+
+/*About text section*/
+.about {
+  width: 100%;
+  padding: 100px 0px;
+  background-color: white;
+}
+
+.about-img img {
+  height:auto;
+  width: 430px;
+  height: 430px;
+  border-radius: 50%;
+  border: solid 1px black;
+}
+
+
+.main-about{
+  width: 1130px;
+  max-width: 95%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.main-about h2 {
+  padding-bottom: 10px;
+}
+
+.main-about h3 {
+  padding-bottom: 10px;
+}
+
+.about2 {
+  width: 100%;
+  padding: 100px 0px;
+  background-color: #F5EBE0;
+}
+
+.about-img2 img {
+  height:auto;
+  width: 430px;
+  height: 430px;
+  border-radius: 50%;
+  border: solid 1px black;
+}
+
+
+.main-about2{
+  width: 1130px;
+  max-width: 95%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.main-about2 h2 {
+  padding-bottom: 10px;
+}
+
+.main-about2 h3 {
+  padding-bottom: 10px;
+}
+
+
+.main-about2 p {
+  padding-right: 30px;
+}
+
+/*Stuff section*/
+
+.posts-section {
+  width: 100%;
+  padding: 100px 0px;
+  background-color: #F5EBE0;
+}
+
+.posts{
+  width: 1130px;
+  max-width: 95%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.posts-text h1 {
+  margin-bottom: 20px;
+}
+
+.posts-text p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/*Footer section*/
+footer {
+  position: relative;
+  width: 100%;
+  padding: 40px 0px;
+  background-color: #FEFCF3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+}
+
+footer h4 {
+  padding-bottom: 5px;
+}
+
+footer a {
+  padding: 5px 5px;
+}
+
+/* 
+Dark Mode Button
+The switch - the box around the slider 
+*/
+.switch {
+position: relative;
+display: inline-block;
+width: 45px;
+height: 20px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+opacity: 0;
+width: 0;
+height: 0;
+}
+
+/* The slider */
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #ccc;
+-webkit-transition: .4s;
+transition: .4s;
+}
+
+.slider:before {
+position: absolute;
+content: "";
+height: 15px;
+width: 15px;
+left: 4px;
+bottom: 2.8px;
+background-color: white;
+-webkit-transition: .4s;
+transition: .4s;
+box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+input:checked + .slider {
+background-color: gray;
+}
+
+input:focus + .slider {
+box-shadow: 0 0 1px gray;
+}
+
+input:checked + .slider:before {
+-webkit-transform: translateX(23px);
+-ms-transform: translateX(23px);
+transform: translateX(23px);
+}
+
+/* Rounded sliders */
+.slider.round {
+border-radius: 34px;
+}
+
+.slider.round:before {
+border-radius: 50%;
+}
+
+/* Dark mode */
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.dark-mode-top-section {
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-color: #333333;    
+  color: white;
+}
+
+.navcolor-dark-mode {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #555555;
+  z-index: 100;
+}
+
+.homenav-dark-mode {
+  color: white;
+  letter-spacing: .5px;
+  text-decoration: none;
+}
+
+.list-dark-mode {
+  color: white;
+  text-decoration: none;
+}
+
+.list-dark-mode:hover {
+  color: white;
+  transition: .5s;
+  text-decoration: underline;
+}
+
+.one-dark-mode {
+  display: inline-block;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid white; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+      typing 3.5s steps(40, end),
+      blink-caret-dark-mode .75s step-end infinite;
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret-dark-mode {
+  from, to { border-color: transparent }
+  50% { border-color: white; }
+}
+
+.about-dark-mode {
+  width: 100%;
+  padding: 100px 0px;
+  background-color:#111111;
+}
+
+.posts-section-dark-mode {
+  width: 100%;
+  padding: 100px 0px;
+  background-color: #333333;
+}
+
+.footer-dark-mode {
+  position: relative;
+  width: 100%;
+  padding: 40px 0px;
+  background-color: #444444;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+}
+
+/*Moving Circles*/
+.circle {
+  position: absolute;
+  top: 80vh;
+  left: 45vw;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: solid 1px black;
+  transform-origin: top left;
+  transform: scale(0) rotate(0deg) translate(-50%, -50%);
+  animation: circle 12s ease-in forwards infinite;
+}
+.circle:nth-child(2n) {
+  border-color: #FFF ;
+}
+
+.circle:nth-child(3n) {
+  background-color: #FFF ;
+  border-color: #FFF ;
+}
+
+.circle:nth-child(5n) {
+  background-color: black ;
+  border-color: black ;
+}
+
+.circle:nth-child(2) {
+  animation-delay: 1s;
+  left: 25vw;
+  top: 40vh;
+}
+
+.circle:nth-child(3) {
+  animation-delay: 2s;
+  left: 75vw;
+  top: 50vh;
+}
+.circle:nth-child(4) {
+  animation-delay: 2s;
+  left: 90vw;
+  top: 10vh;
+}
+.circle:nth-child(5) {
+  animation-delay: 3s;
+  left: 10vw;
+  top: 85vh;
+}
+.circle:nth-child(6) {
+  animation-delay: 4s;
+  left: 50vw;
+  top: 10vh;
+}
+
+.circle:nth-child(7) {
+  animation-delay: 6s;
+  left: 50vw;
+  top: 50vh;
+}
+
+.circle:nth-child(8) {
+  animation-delay: 3s;
+  left: 10vw;
+  top: 85vh;
+}
+
+.circle:nth-child(9) {
+  animation-delay: 1s;
+  left: 10vw;
+  top: 20vh;
+}
+
+.circle:nth-child(10) {
+  animation-delay: 8s;
+  left: 25vw;
+  top: 15vh;
+}
+
+.circle:nth-child(10) {
+  animation-delay: 8s;
+  left: 25vw;
+  top: 15vh;
+}
+
+.circle:nth-child(11) {
+  animation-delay: 3s;
+  left: 80vw;
+  top: 90vh;
+}
+
+.circle:nth-child(12) {
+  animation-delay: 5s;
+  left: 95vw;
+  top: 70vh;
+}
+
+.circle:nth-child(13) {
+  animation-delay: 10s;
+  left: 85vw;
+  top: 80vh;
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
   }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes circle {
+  from {
+    transform: scale(0) rotate(0deg) ;
+    opacity: 1;
+  }
+  to {
+    transform: scale(20) rotate(400deg) ;
+    opacity: 0;
+  }
+}
+
+.big-circle {
+  height: 250px;
+  width: 250px;
+  background-color: aqua;
   
-  .circle {
-    position: absolute;
-    top: 80vh;
-    left: 45vw;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    border: solid 1px #D7D4E4;
-    transform-origin: top left;
-    transform: scale(0) rotate(0deg) translate(-50%, -50%);
-    animation: circle 12s ease-in forwards infinite;
-    background-color: #212335;
-  }
-  .circle:nth-child(2n) {
-    border-color: #FFF ;
-  }
-  .circle:nth-child(2) {
-    animation-delay: 2s;
-    left: 25vw;
-    top: 40vh;
-  }
-  .circle:nth-child(3) {
-    animation-delay: 4s;
-    left: 75vw;
-    top: 50vh;
-  }
-  .circle:nth-child(4) {
-    animation-delay: 6s;
-    left: 90vw;
-    top: 10vh;
-  }
-  .circle:nth-child(5) {
-    animation-delay: 8s;
-    left: 10vw;
-    top: 85vh;
-  }
-  .circle:nth-child(6) {
-    animation-delay: 10s;
-    left: 50vw;
-    top: 10vh;
-  }
-
-  @keyframes Gradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-  @keyframes circle {
-    from {
-      transform: scale(0) rotate(0deg) ;
-      opacity: 1;
-    }
-    to {
-      transform: scale(20) rotate(400deg) ;
-      opacity: 0;
-    }
-  }
+}
 
