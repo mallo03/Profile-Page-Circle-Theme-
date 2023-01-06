@@ -71,4 +71,11 @@ function myFunction() {
     } else {
         footer.className = 'footer';
     }
+
+    let aboutme = document.getElementById('aboutme')
+    if (aboutme.className === 'aboutme') {
+        aboutme.className = 'aboutme-dark-mode';
+    } else {
+        aboutme.className = 'aboutme';
+    }
 }

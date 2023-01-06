@@ -70,7 +70,7 @@ nav ul li {
   text-decoration: underline;
 }
 
-#aboutme {
+.aboutme {
   height: 700px;
   width: 700px;
   z-index: 3;
@@ -378,6 +378,20 @@ border-radius: 50%;
   padding: 100px 0px;
   background-color:#111111;
 }
+
+.aboutme-dark-mode {
+  height: 700px;
+  width: 700px;
+  z-index: 3;
+  position:absolute;
+  top: 27%;
+  left: 40%;
+  border-radius: 50%;
+  background-color: gray;
+  text-align: left;
+  transition:0.5s;
+}
+
 
 .posts-section-dark-mode {
   width: 100%;
