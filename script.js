@@ -78,4 +78,18 @@ function myFunction() {
     } else {
         aboutme.className = 'aboutme';
     }
+
+    let about2 = document.getElementById('about2')
+    if (about2.className === 'about2') {
+        about2.className = 'about2-dark-mode';
+    } else {
+        about2.className = 'about2';
+    }
+
+    let about3 = document.getElementById('about3')
+    if (about3.className === 'about3') {
+        about3.className = 'about3-dark-mode';
+    } else {
+        about3.className = 'about3';
+    }
 }
