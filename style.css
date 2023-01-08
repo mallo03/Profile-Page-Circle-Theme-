@@ -292,8 +292,9 @@ footer h4 {
   padding-bottom: 5px;
 }
 
-footer a {
+.social a {
   padding: 5px 5px;
+  color: black;
 }
 
 /* 
@@ -469,6 +470,11 @@ border-radius: 50%;
   align-items: center;  
 }
 
+.social-dark-mode a {
+  padding: 5px 5px;
+  color: white;
+}
+
 /*Moving Circles*/
 .circle {
   position: absolute;
@@ -600,3 +606,47 @@ border-radius: 50%;
   
 }
 
+/* Responsiveness */
+
+@media (max-width: 1250px){
+  .aboutme {
+    display: none;
+    height: 350px;
+    width: 350px;
+    z-index: 3;
+    border-radius: 50%;
+    background-color: white;
+    text-align: left;
+    transition:0.5s;
+  }
+
+  #intro {
+    font-size: 10px;
+    font-style: italic;
+    padding-bottom: 2%;
+  }
+  #quickinfo h2{
+    letter-spacing: 2px;
+    padding-left: 10px;
+  }
+  .about-img img {
+    display: none;
+  }
+  .about-img2 img {
+    display: none;
+  }
+  .about-img3 img {
+    display: none;
+  }
+
+  .navcolor{
+    display: none;
+  }
+  .topsection {
+    display: none;
+  }
+  .circle {
+    display: none;
+  }
+
+}

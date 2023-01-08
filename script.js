@@ -92,4 +92,11 @@ function myFunction() {
     } else {
         about3.className = 'about3';
     }
+
+    let social = document.getElementById('contact')
+    if (social.className === 'social') {
+        social.className = 'social-dark-mode';
+    } else {
+        social.className = 'social';
+    }
 }
